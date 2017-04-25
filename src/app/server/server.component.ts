@@ -8,6 +8,13 @@ export class ServerComponent {
   serverId: number = 10;
   serverStatus: string = 'offline';
 
+  userName = "";
+
+  onUpdateUserName(event: Event){
+  this.userName = (<HTMLInputElement>event.target).value;
+}
+
+
 getServerStatus(){
   return this.serverStatus;
 }
