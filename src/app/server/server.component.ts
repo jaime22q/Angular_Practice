@@ -9,11 +9,19 @@ export class ServerComponent {
   serverStatus: string = 'offline';
 
   userName = "";
+  emptyUn: Boolean = true;
 
   onUpdateUserName(event: Event){
   this.userName = (<HTMLInputElement>event.target).value;
 }
 
+userNameEmpty(){
+  return this.userName;
+}
+
+onUserNameNotEmpty(event: Event){
+  this.userName = "";
+}
 
 getServerStatus(){
   return this.serverStatus;
