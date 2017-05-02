@@ -14,7 +14,13 @@ export class ServerComponent {
   onUpdateUserName(event: Event){
   this.userName = (<HTMLInputElement>event.target).value;
 }
-
+constructor(){
+  this.serverId = Math.floor(Math.random() * 20 + 5);
+  this.serverStatus = Math.random() > 0.5 ? 'offline' : 'online';
+}
+getColor(){
+  return this.serverStatus === 'online' ? 'green' : 'red';
+}
 userNameEmpty(){
   return this.userName;
 }
