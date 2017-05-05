@@ -11,3 +11,4 @@
 (click)="onCreatedServer()"
 >Add Server</button>
 <p *ngIf="serverCreated">{{serverCreationSt}}</p>
+<app-server *ngFor="let server of servers"></app-server>
