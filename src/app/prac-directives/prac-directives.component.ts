@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class PracDirectivesComponent implements OnInit {
 cnt = 0;
 visible = true;
-repetition = [];
+counter = [];
 paragraph = "This paragraph will toggle with the button.";
 
 
   toggle(){
   this.paragraph = "This paragraph will toggle with the button.";
   this.cnt++;
-  this.repetition.push(this.cnt);
+  this.counter.push(this.cnt);
   this.cnt % 2 == 0 ? this.visible = true : this.visible = false;
-  // console.log(this.cnt);
+  console.log(this.cnt);
 }
   constructor() { }
 
