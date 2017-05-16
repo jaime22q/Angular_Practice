@@ -8,7 +8,9 @@
   {{ paragraph}}
 </p>
 
-
-<p *ngFor="let cnt of counter">
+<p *ngFor="let cnt of counter"
+  [ngStyle]="{backgroundColor: color()}"
+  [ngClass]="{letter: isFifth()}"
+>
   {{ cnt }}
 </p>
