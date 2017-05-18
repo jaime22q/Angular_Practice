@@ -21,14 +21,13 @@ paragraph = "This paragraph will toggle with the button.";
   this.cnt++;
   this.counter.push(this.cnt);
   this.cnt % 2 == 0 ? this.visible = true : this.visible = false;
-  // console.log(this.cnt);
 }
 isFifth(){
-  return this.cnt > 4 ? true : false;
+  return (this.cnt > 4);
 }
 
 color(){
-  return this.isFifth() ? "blue" : "red";
+  return this.isFifth() ? "blue" : "";
 }
   constructor() { }
 
